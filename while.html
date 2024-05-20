@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        // let i = 20;
+        // let text= "";
+
+        // while(i<50){
+        //     text += i + "<br>"; // text +=(concade) means text = text +
+
+        //     i++;
+        // }
+
+        // document.write(text);
+    </script>
+
+
+
+
+    <script>
+        // const flowers = new Array("rose", "tulip"," belly", "waterlily");
+        // let i = 0;
+        // let output = "<ol>";
+
+        // while(i<flowers.length){
+        //     output += "<li>" + flowers[i]  + "</li>";
+        //         i++;
+
+        // }
+
+        // output += "</ol>";
+
+        // document.write(output)
+
+    </script>
+
+    <script>
+        const flowers = ["rose", "tulip"," belly", "waterlily"];
+
+        let i = 0;
+        let output = "<table>";
+            output += "<tr><th>SN</th><th>Name</th></tr>"
+
+        while(i<flowers.length){
+            sn=i+1;
+            output += "<tr><td>" + sn + "</td>";
+            output += "<td>" + flowers[i]  + "</td></tr>";
+
+                i++;
+
+        }
+
+        output += "</table>";
+
+        document.write(output)
+
+    </script>
+    
+</body>
+</html>
