@@ -11,23 +11,27 @@
         function findmax(){
             let received = prompt("enter values", "");
         //let numbers = [12, 7, 10, 8, 5];
-        const numbers = received.split(",");
-
-        console.log(numbers);
-
-
-
-
-        let max = numbers[0];   //initialize to first value
+        // 
+         const numbers = received.split(",");
         
+         alert(typeof(numbers));
 
-        for (let i = 1; i < numbers.length; i++) {
-            if (numbers[i] > max){
-                max = numbers[i];
-            }
-        }
-       // document.write(max);
-       document.getElementById("show").innerHTML=max;
+        // console.log(numbers);
+
+
+
+
+       // let max = numbers[0];   //initialize to first value
+       // max = parseInt(max);
+       
+
+    //     for (let i = 1; i < numbers.length; i++) {
+    //         if (parseInt(numbers[i]) > max){
+    //             max = numbers[i];
+    //         }
+    //     }
+    //    // document.write(max);
+    //    document.getElementById("show").innerHTML=max;
     }
     </script>
 
