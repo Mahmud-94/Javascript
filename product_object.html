@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <p id="show"></p>
+    <script>
+        const product = {
+            name: "Samsung Mobile",
+            price: "10000 tk",
+            details: "lorem ipsum",
+            weight: "200 g",
+
+        
+
+        // console.log(product);
+
+
+        // product.info = function (){
+        //     let text = "";
+        //     text += "Product Name : "  + this.name + "<br>" ;
+        //     text += "Product Name : "  + this.price + "<br>" ;
+        //     text += "Product Name : "  + this.details + "<br>" ;
+        //     text += "Product Name : "  + this.weight + "<br>" ;
+
+
+        //     return text;
+        // }
+
+        
+
+
+info :function (){
+    let text = "";
+    text += "Product Name : "  + this.name + "<br>" ;
+    text += "Product Name : "  + this.price + "<br>" ;
+    text += "Product Name : "  + this.details + "<br>" ;
+    text += "Product Name : "  + this.weight + "<br>" ;
+
+
+    return text.toUpperCase();
+
+   
+}
+}
+
+        document.getElementById("show").innerHTML= product.info();
+
+
+
+
+
+        
+    </script>
+    
+</body>
+</html>
