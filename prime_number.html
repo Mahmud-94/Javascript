@@ -1,42 +1,45 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>prime number</title>
 </head>
+
 <body>
-    
+
     <script>
-        function primecheck(){
-           let num = prompt("enter a number", "");
+        function primecheck() {
+            let num = prompt("enter a number", "");
 
-           if (num==1) {
-            return num + " is not a prime number" ;
-           }
-
-
-           else if (num == 2) {
-            return num + " is a prime number" ;
-
-           }
-
-           else {
-            for (var x = 2; x < num; x++){
-                if (num % x == 0)
-                 { return num + "is not a prime number";
-
-                }
+            if (num == 1) {
+                return num + " is not a prime number";
             }
-             return num + "is a prime number";
 
-                
-           }
+
+            else if (num == 2) {
+                return num + " is a prime number";
+
+            }
+
+            else {
+                for (var x = 2; x < num; x++) {
+                    if (num % x == 0) {
+                        return num + "is not a prime number";
+
+                    }
+                }
+                return num + "is a prime number";
+
+
+            }
         }
         document.write(primecheck())
 
     </script>
-    
-    
+
+
 </body>
+
 </html>

@@ -6,7 +6,7 @@
     <title>Document</title>
 </head>
 <body>
-        <h3>Sum</h3>
+        <!-- <h3>Sum</h3> -->
     <script>
     //     function sum(){
     //     let x =  prompt("Enter a first number", "");
@@ -23,7 +23,7 @@
     <!-- <button onclick="sum()">Click here</button> -->
 
 
-    <h3>Max number</h3>
+    <!-- <h3>Max number</h3> -->
     <script>
         
         // let num = [3, 5, 7, 1, 12, 11];
@@ -40,9 +40,75 @@
 
 
 <script>
-    const fruits =[ "mango", "banana", "watermelon", "lichi"];
-    let i = 0;
+    // const fruits =[ "mango", "banana", "watermelon", "lichi"];
+    // let i = 0;
 </script>
+
+
+
+
+<script>
+    // function prime(){
+    //     let num = prompt("Enter a number", "" );
+
+    //     if (num == 1){
+    //         return num + " is not a prime number";
+
+    //     }
+
+    //     else if (num == 2){
+    //         return num + " is a prime number";
+    //     }
+
+    //     else {
+    //         for( var x = 2; x < num; x++ ){
+    //             if(num %x ==0){
+    //                 return num + " is not a prime number";
+    //             }
+    //         }
+    //         return num + " is a prime number";
+    //     }
+
+    // }
+    // document.write(prime())
+
+
+</script>
+
+
+<h1>
+
+<script>
+   function prime(){
+
+    let num = prompt("enter a number", "");
+
+    if(num ==1){
+        return "Is not a prime number";
+
+
+    }
+    else if(num== 2){
+        return "Is a prime number";
+
+    }
+    else{
+        for( var x=2; x<num; x++){
+            if(num%x==0){
+                return "Is not a prime number";
+            }
+        }
+        return "Is a prime number";
+    }
+
     
+   }
+   document.write( prime())
+    
+</script>
+</h1>
+
+
+   
 </body>
 </html>
