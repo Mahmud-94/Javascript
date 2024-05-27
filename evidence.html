@@ -31,7 +31,7 @@
 
         // for(let i = 1; i < num.length; i++) {
         //     if (num[i]>max){
-        //         max=num[i];
+        //         max=num[i]; 
         //     }
         // }
 
@@ -77,36 +77,30 @@
 
 
 <h1>
+    <div id="result"></div>
 
 <script>
-   function prime(){
+    function pass_fail(){
+        let MCQ = prompt("enter your MCQ number", "");
+        let decr = prompt("enter your decr number", "");
+        let evidence = prompt("enter your evidence number", "");
 
-    let num = prompt("enter a number", "");
+        if(MCQ>=80 && decr>=60 && evidence>=60 ){
+            document.getElementById("result").innerHTML="<div class='pass'>passed</div>";
 
-    if(num ==1){
-        return "Is not a prime number";
-
-
-    }
-    else if(num== 2){
-        return "Is a prime number";
-
-    }
-    else{
-        for( var x=2; x<num; x++){
-            if(num%x==0){
-                return "Is not a prime number";
-            }
         }
-        return "Is a prime number";
-    }
+        else{
+            document.getElementById("result").innerHTML="<div class='fail'>failed</div>";
 
-    
-   }
-   document.write( prime())
-    
+        }
+
+        
+    }
 </script>
+<button onclick="pass_fail()">Click here</button>
+  
 </h1>
+
 
 
    
