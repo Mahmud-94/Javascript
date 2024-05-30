@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+        <h3>Student form</h3>
+        <form action="" name="myform">
+           <h3> <input type="text" name="ID" placeholder="Enter your ID"><br>
+            <input type="text" name="name" placeholder="Enter your Name"><br>
+            <input type="text" name="course" placeholder="Enter your course name"><br>
+            <input type="text" name="section" placeholder="Enter your section"><br>
+            <input type="button" name="submit" value="Submit" onclick="mwindow()"></h3>
+            
+        </form>
+    
+        <script>
+            function mwindow(){
+                let id = document.myform.ID.value;
+                let nm = document.myform.name.value;
+                let cn = document.myform.course.value;
+                let sec = document.myform.section.value;
+
+
+              if(id==""){
+                alert("ID must be entered");
+
+              }
+
+              else if(nm==""){
+                alert("Name must be entered");
+
+              }
+              else if(cn==""){
+                alert("course name must be entered");
+
+              }
+              else if(sec==""){
+                alert("Section must be entered");
+
+              }
+
+              else{
+                let mywindow= window.open("", "aa", "width=600, height=500");
+              //  mywindow.document.write("<h3>"+   id + "<br>" + nm + "<br>" + cn + "<br>" + sec  +"</h3>"  );
+
+            let output;
+            output= "<h1> student information</h1>";
+            output+= "<h3>" + "ID: "+ id+ "<br>"+"</h3>";
+            output+= "<h3>" +"fullname: "+ nm+ "<br>"+"</h3>";
+            output+= "<h3>"+"Course name: "+ cn+ "<br>" +"</h3>";
+            output+= "<h3>"+"Section: "+ sec+ "<br>" +"</h3>";
+
+            mywindow.document.write(output)
+              }
+    
+            }
+        </script>
+    "<h3>"+    +"</h3>"
+    
+        
+    
+    
+    
+</body>
+</html>
