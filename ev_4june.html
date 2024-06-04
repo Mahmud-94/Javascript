@@ -1,0 +1,151 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <!-- <script>
+        function fct(){
+            let num = prompt("enter number", "");
+            let fact = 1;
+
+            for(let i = num; i>=1; i--){
+                fact= fact*i;
+
+            }
+            alert(fact)
+
+        }
+    </script>
+    <button onclick="fct()">click here</button> -->
+
+
+
+    <!-- <script>
+        function prm(){
+            let num = prompt("enter number", "");
+            
+            if (num ==1){
+                return "It is a prime number"
+            }
+            else if (num ==2){
+                return "It is not a prime number"
+            }
+            else{
+                for(let x=2; x<num; x++){
+                    if(num%x==0){
+                        return "It is not a prime number"
+
+                    }
+                }
+                return "It is a prime number"
+            }
+
+        }
+        document.write(prm())
+    </script> -->
+
+
+
+
+    <!-- <form action="" name="dform">
+        Name:
+        <input type="text" name="name" placeholder="enter name"><br>
+        ontact:
+        <input type="number" name="contact" placeholder="enter your number"><br>
+        Remarks: <br>
+        <textarea name="remark" id="" placeholder="enter your comment"></textarea><br>
+        Sex:
+        <input type="radio" name="sex" value="Male">Male
+        <input type="radio" name="sex" value="Female">Female<br>
+        Courses:
+        <input type="checkbox" class="course" value="NT">NT
+        <input type="checkbox" class="course" value="IAD">IAD
+        <input type="checkbox" class="course" value="DDD">DDD
+        <input type="checkbox" class="course" value="ESAD">ESAD <br>
+        Location:
+        <select name="location" id="">
+            <option value="select one">select one</option>
+            <option value="Banani">Banani</option>
+            <option value="Dhanmondi">Dhanmondi</option>
+            <option value="Mirpur">Mirpur</option>
+        </select><br>
+        <button type="button" onclick="trdata()" >submit</button>
+    </form>
+    <script>
+        function trdata(){
+            let nm = document.dform.name.value;
+            let cnt = document.dform.contact.value; 
+            let rmk = document.dform.remark.value; 
+            let sx = document.dform.sex.value; 
+            let place = document.dform.location.value;  
+            const courses = document.getElementsByClassName("course");
+            let data = "";
+            for(let i=0; i<courses.length; i++){
+                if(courses[i].checked){
+                    data += courses[i].value + ", ";
+                }
+            }
+
+            //alert(nm)
+
+            let output= "Trainee Output";
+            output += "Name; " + nm + "<br>";
+            output += "Contact; " + cnt + "<br>";
+            output += "Remarks; " + rmk + "<br>";
+            output += "sex; " + sx + "<br>";
+            output += "Location; " + place + "<br>";
+            output += "Courses; " + data + "<br>";
+
+            let cv = window.open("", "", "height=300, width=400")
+            cv.document.write(output)
+
+        }
+
+    </script> -->
+
+
+
+
+
+
+
+    <form action="" name="myform">
+        <input type="text" name="email" placeholder="enter email"> <br>
+        <input type="text" name="con_email" placeholder="enter confirm email"> <br>
+        <!-- <input type="text" name="lname" placeholder="enter last name"> <br> -->
+        <input type="password" name="password" placeholder="enter password"> <br>
+        <input type="button" onclick="mailv ()" name="submit" value="SUBMIT">
+        
+    </form>
+    <script>
+        function mailv (){
+            let email1 = document.myform.email.value;
+            let email2 = document.myform.con_email.value;
+            let pass = document.myform.password.value;
+            let pattern = /[a-z0-9]+@[a-z]+\.[a-z]/;
+            let result = email1.search(pattern);
+
+            if(result==-1){
+                alert("not valid")
+            }
+            else if(email1!==email2){
+                alert("not matched")
+            }
+            else if(pass.length<7){
+                alert("not valid")
+            }
+            else{
+                alert("valid")
+
+            }
+
+
+
+        }
+    </script>
+    
+</body>
+</html>
