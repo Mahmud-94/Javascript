@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Fact</title>
+</head>
+<body>
+    <script>
+        function fct(){
+            let num = prompt("Enter number", "");
+            let fact = 1;
+
+            for(let i = num; i>=1; i--){
+                fact = fact * i;
+            }
+            document.write(fact + " is factorial of " + num)
+            //alert(fact);
+
+
+        }
+
+       
+    </script>
+    <button onclick="fct()">click here</button>
+    
+</body>
+</html>

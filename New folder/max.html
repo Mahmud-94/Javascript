@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Max</title>
+</head>
+
+<body>
+    <!-- <script>
+        function maxmn(){
+            let x = prompt("Enter a number", "");
+            let y = prompt("Enter a number", "");
+            let z = prompt("Enter a number", "");
+
+            if (x>y && x>z){
+                return x +" is max";
+            }
+            else if (y>x && y>z){
+                return y +" is max";
+            }
+            else{
+                return z +" is max";
+
+            }
+
+        }
+
+
+
+        document.write(maxmn())
+    </script> -->
+
+
+
+
+
+
+
+
+
+
+    <script>
+        let x = prompt("Enter a number", "");
+        let y = prompt("Enter a number", "");
+        let z = prompt("Enter a number", "");
+
+        let a = parseInt(x);
+        let b = parseInt(y);
+        let c = parseInt(z);
+        
+        let num = [a, b, c];
+        let max = num[0];
+
+        for (let i = 1; i < num.length; i++) {
+            if (num[i] > max) {
+                max = num[i];
+            }
+        }
+
+        let min = num[0];
+
+        for (let i = 1; i < num.length; i++) {
+            if (num[i] < min) {
+                min = num[i];
+            }
+        }
+
+        document.write(max + " is highest" + "<br>" + min + " is lowest");
+    </script>
+
+</body>
+
+</html>
