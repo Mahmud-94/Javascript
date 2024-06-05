@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <form action="" name="formval">
+        Email:
+        <input type="text" name="email" placeholder="enter your mail"> <br>
+        Confirm email:
+        <input type="text" name="con_email" placeholder="enter your mail"> <br>
+        Password:
+        <input type="password" name="password" placeholder="enter password"> <br>
+        <button type="button" name="submit" onclick="formvalid()">Submit</button>
+    </form>
+
+    <script>
+        const formvalid = () => {
+            let email1 = document.formval.email.value;
+            let email2 = document.formval.con_email.value;
+            let pass = document.formval.password.value;
+            let pattern= /[a-z0-9]+@[a-z]+\.[a-z]/;
+            let cf = email1.search(pattern);
+
+            if(cf==-1){
+                alert("Not valid");
+            }
+            else if(email1!==email2){
+                alert("Not Matched");
+            }
+            else if(pass.length<8){
+                alert("Not valid");
+            }
+            else{
+                alert("valid");
+
+            }
+            
+
+        }
+    </script>
+    
+</body>
+</html>

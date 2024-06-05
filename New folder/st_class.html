@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <div id="show"></div>
+    <script>
+        class student{
+            constructor(name, dob, email, ID){
+                this.stname= name;
+                this.stdob= dob;
+                this.stemail= email;
+                this.stID= ID;
+                
+            }
+            info(){
+                let details = "<h1> student information</h1>";
+                details += "name: " + this.stname + "<br>";
+                details += "DOB: " + this.stdob + "<br>";
+                details += "Email: " + this.stemail + "<br>";
+                details += "ID: " + this.stID + "<br>";
+                return details;
+            }
+        }
+       const st1 = new student("masud", "2005-05-03", "masud@gmail.com", "1234");
+       const st2 = new student("Rakib", "2022-05-03", "rakib@gmail.com", "5678");
+        //document.write.(st1.info())
+        document.getElementById("show").innerHTML=st1.info() + "<br>" + st2.info()
+    </script>
+    
+</body>
+</html
