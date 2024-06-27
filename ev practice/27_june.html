@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <form action="" name="frm">
+        Name:
+        <input type="text" name="name" placeholder="Enter ypur name"><br>
+        Contact:
+        <input type="number" name="contact" placeholder="Enter ypur contact number"><br>
+        Remarks: <br>
+        <textarea name="remarks" id="" placeholder="Enter your comments"></textarea> <br>
+        Gender: <br>
+        <input type="radio" name="gender" value="m"> Male
+        <input type="radio" name="gender" value="f"> Female<br>
+        Courses: <br>
+        <input type="checkbox">NT
+        <input type="checkbox">IAD
+        <input type="checkbox">DDD
+        <input type="checkbox">ESAD
+        <input type="checkbox">SID <BR>
+            Location:        
+            <select name="location" id="">
+                <option value="">Select one</option>
+                <option value="Banani">Banani</option>
+                <option value="Dhanmondi">Dhanmondi</option>
+                <option value="Mirpur">Mirpur</option>
+            </select><br>
+            <button type="button" onclick="fdata()">Submit</button>
+
+
+    </form>
+
+    <script>
+        class formdata{
+            constructor(name, contact, remark, gender, location){
+                this.name = name;
+                this.contact = contact;
+                this.remark = remark;
+                this.gender = gender;
+                this.location = location;
+
+            }
+
+            getdata(){
+
+                let win = window.open("", "","width=50", "height=50" );
+                let output = "";
+                output += "Name: "+ this.name + "<br>";
+                output += "Contact: "+ this.contact + "<br>";
+                output += "Remarks: "+ this.remark + "<br>";
+                output += "Gender: "+ this.gender + "<br>";
+                output += "Location: "+ this.location + "<br>";
+
+                win.document.write(output);
+                
+
+
+
+                // alert(this.name);
+            }
+
+        }
+        function fdata(){
+            let nm = document.frm.name.value;
+            let cnt = document.frm.contact.value;
+            let rmk = document.frm.remarks.value;
+            let gender = document.frm.gender.value;
+            let place = document.frm.location.value;
+
+
+           let obj = new formdata(nm, cnt, rmk, gender, place);
+           obj.getdata()
+
+        }
+
+        
+
+
+    </script>
+    
+</body>
+</html>

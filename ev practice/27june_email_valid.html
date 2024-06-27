@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    
+</head>
+<body>
+    <form action="" name="myfm">
+    Email: <br>
+    <input type="email" name="email" placeholder="Enter your Email "> <br>
+    <input type="password" name="password" placeholder="Enter your password"><br>
+    <button type="button" onclick="mymail()">submit</button><br><br><br>
+</form>
+    
+
+<script>
+    class validation{
+        constructor(mail){
+            this.mymail=mail;
+        }
+        mailvalid(){
+            let pattern = /[a-z0-9]+@[a-z]+\.[a-z]{2,4}$/i;
+            if(this.mymail.search(pattern)==-1){
+                return false;
+            }
+            else{
+               return true;
+
+            }
+        }
+
+
+}
+function mymail(){
+            let em = document.myfm.email.value;
+
+            let result = new validation(em);
+            if(result.mailvalid()){
+                document.getElementById("show").innerHTML="Email address is correct";
+
+            }
+            else{
+                 document.getElementById("show").innerHTML="Email address is wrong";
+
+            }
+        }
+
+</script>
+<div id="show" style="height: 60px; width: 200px; border: 1px solid red; color: blue; background-color: rgb(220, 223, 41); text-align: center;"></div>
+</body>
+</html>
