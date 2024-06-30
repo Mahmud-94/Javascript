@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <form action="" name="ml">
+        <input type="mail" name="mail" placeholder="Enter your mail"> <br>
+        <input type="password" name="password" placeholder="Enter your password"> <br>
+        <button type="button" onclick="mailvalid()">Submit</button>
+    </form>
+
+    <script>
+        class validation {
+            constructor(mail, password) {
+                this.mail = mail;
+                this.pass = password;
+            }
+            mvalid() {
+                let pattern = /[a-z0-9]+@[a-z]+\.[a-z]/;
+                if (this.mail.search(pattern) == -1) {
+                    alert("Email is wrong");
+                }
+                else if (this.pass.length < 8) {
+                    alert("Password is week");
+                }
+                else {
+                    document.write("Email is correct");
+                }
+
+            }
+
+
+
+        }
+        function mailvalid() {
+            let mail = document.ml.mail.value;
+            let pass = document.ml.password.value;
+
+            let result = new validation(mail, pass);
+            result.mvalid();
+        }
+    </script>
+
+
+</body>
+
+</html>

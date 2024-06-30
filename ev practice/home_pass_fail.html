@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=\], initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <form action="" name="fm">
+        <input type="number" name="mcq" placeholder="Enter your mcq number"><br>
+        <input type="number" name="descriptive" placeholder="Enter your descriptive number"><br>
+        <input type="number" name="evidence" placeholder="Enter your evidence number"><br>
+        <button type="button" onclick="pfr()">Submit</button>
+    </form>
+
+    <div id="show"></div>
+
+    <script>
+        function pfr(){
+            let mcq = document.fm.mcq.value;
+            let descr = document.fm.descriptive.value;
+            let ev = document.fm.evidence.value;
+
+            if(mcq>=80 && descr>=60 && ev>=60){
+                document.getElementById("show").innerHTML="You have passed";
+            }
+            else{
+                document.getElementById("show").innerHTML="You have failed";
+            }
+
+
+        }
+
+    </script>
+    
+</body>
+</html>

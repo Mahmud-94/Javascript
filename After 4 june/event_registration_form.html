@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <div id="show"></div>
+    
+        
+            
+    <form action="thank_you.html" name="event" onsubmit="return event_valid()">
+        First name: <br>
+        <input type="text" name="name" placeholder="enter your first name"> <br>
+        Last name: <br>
+        <input type="text" name="lname" placeholder="enter your last name"> <br>
+        Company: <br>
+        <textarea name="cname" placeholder="write your Company details" id=""></textarea> <br>
+        Email: <br>
+        <input type="text" name="email" placeholder="enter your email"> <br>
+        Phone: <br>
+        <input type="number" name="phone" placeholder="enter your phone number"><br>
+        subject: <br>
+        <select name="subject" id="">
+            <option value="select one">select one</option>
+            <option value="Manager">Manager</option>
+            <option value="sales officer">sales officer</option>
+            <option value="Event Manager">Event Manager</option>
+        </select> <br>
+        Are you an existing customer ? <br>
+        <input type="radio" name="existing" value="Yes" id="">
+        <input type="radio" name="existing" value="No" id=""><br>
+
+        <button type="submit"  value="submit">submit</button>
+ 
+
+    </form>
+
+
+
+
+    <script>
+        function event_valid(){
+        let fnm = document.event.name.value;
+        let lnm = document.event.lname.value;
+        let cnm = document.event.cname.value;
+        let em = document.event.email.value;
+        let phn = document.event.phone.value;
+        let exs = document.event.existing.value;
+        let pattern = /[a-z0-9._]+@[a-z]+\.[a-z]/;
+        // let pattern1 = /[0-9]/;
+
+        const errors = [];
+
+        if(fnm==""){
+            errors[errors.length] = "First name can't be empty";
+        }
+        if(lnm==""){
+            errors[errors.length] = "Last name can't be empty";
+        }
+        if(cnm==""){
+            errors[errors.length] = "Company name can't be empty";
+        }
+        if(em==""){
+            errors[errors.length] = "Email can't be empty";
+        }
+        else if(em.search(pattern)==-1){
+            errors[errors.length] = " can't be empty";
+        }
+        if(phn==""){
+            errors[errors.length] = "Phone number can't be empty";
+        }
+        if(exs==""){
+            errors[errors.length] = "existing can't be empty";
+        }
+
+        if(errors.length>0){
+            
+        let erroroutput = "<ul>";
+           for (let i = 0; i<errors.length; i++){
+            erroroutput += "<li>" + errors[i] + "</li>";
+            erroroutput += "</ul>";
+
+            }
+
+            document.getElementById("show").innerHTML=erroroutput;
+            return false
+
+        }
+        else{
+            // document.getElementById("show").innerHTML="";
+            return true
+
+        }
+
+
+
+    }
+
+    </script>
+    
+</body>
+</html>

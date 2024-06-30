@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script src="11june.js"></script>
+</head>
+<body>
+
+    <h1>Ans no. : 01</h1>
+    <form action="" name="frm">
+        Email: <br>
+        <input type="mail" name="email" placeholder="enter your mail"><br>
+        Password: <br>
+        <input type="password" name="password" placeholder="enter your password"><br>
+        <button type="button" onclick="vld()">click here</button>
+
+    </form>
+
+    <script>
+        function vld(){
+            let em = document.frm.email.value;
+            let pass = document.frm.password.value;
+
+            let obj = new mahmud(em, pass);
+            obj.update();
+
+    }
+    </script>
+    
+</body>
+</html>

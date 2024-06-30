@@ -51,7 +51,6 @@
                 if(courses[i].checked){
                     data += courses[i].value + ", ";
                 }
-
             }
             //alert(data)
             let output ="<h1> Trainee output </h1>";
@@ -62,12 +61,8 @@
             output += "Location: " + plc + "<br>";
             output += "courses: " + data + "<br>";
 
-
             let cv = window.open("", "", "height=450,width=700");
             cv.document.write(output);
-
-
-
 
         }
 

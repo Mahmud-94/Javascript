@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <form action="" name="fm">
+        Username:
+        <input type="text" name="name" placeholder="Enter your name"> <br>
+        password:
+        <input type="password" name="password" placeholder="enter your password"><br>
+        <button type="button" onclick="valid()">Submit</button>
+    </form>
+
+    <script>
+        class validation{
+            constructor(name, password){
+                this.name=name;
+                this.pass=password;
+            }
+
+            getdata(){
+                if(this.name.length<6){
+                    alert("Username must be at least 6 character");
+                }
+                else if(this.pass.length<8){
+                    alert("Password must be at least 8 character");
+                }
+                else{
+                    document.write("Succesfully Login");
+                }
+
+            }
+        }
+
+        function valid(){
+            let un = document.fm.name.value;
+            let passw = document.fm.password.value;
+            let obj = new validation(un, passw);
+            obj.getdata();
+
+
+        }
+    </script>
+    
+</body>
+</html>

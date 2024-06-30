@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <form action="" name="fm">
+        Name:
+        <input type="text" name="name" placeholder="Enter your name"><br>
+        Address: <br>
+        <textarea name="address" placeholder="Enter your address" id=""></textarea> <br>
+        Gender:
+        <input type="radio" name="gender" value="M">Male 
+        <input type="radio" name="gender" value="F">Female <br>
+        Courses:
+        <input type="checkbox" class="cr" value="PHP">PHP
+        <input type="checkbox" class="cr" value="Javascript">Javascript
+        <input type="checkbox" class="cr" value="Python">Python
+        <input type="checkbox" class="cr" value="Oracle">Oracle <br>
+        Location:
+        <select name="location" id="">
+            <option>Select One</option>
+            <option>Banani</option>
+            <option>Malibag</option>
+            <option>Mirpur</option>
+        </select> <br>
+        <button type="button" onclick="formvalid()">Submit</button>
+
+    </form>
+
+    <script>
+        class objform{
+            constructor(name, address, gender, courses, location){
+
+                this.name=name;
+                this.address=address;
+                this.gender=gender;
+                this.courses=courses;
+                this.location=location;
+            }
+            
+            getdata(){
+
+                let win = window.open("", "", "height=600px,width=600px");
+                let output="";
+
+                output+= "Name: "+ this.name+ "<br>";
+                output+= "Address: "+ this.address+ "<br>";
+                output+= "Gender: "+ this.gender+ "<br>";
+                output+= "Courses: "+ this.courses+ "<br>";
+                output+= "Location: "+ this.location+ "<br>";
+
+                win.document.write(output);
+
+            }
+        }
+
+        function formvalid(){
+            let nm = document.fm.name.value;
+            let adr = document.fm.address.value;
+            let sex = document.fm.gender.value;
+            let ln =document.getElementsByClassName("cr");
+
+            let language = "";
+            for(i=0; i<ln.length; i++){
+                if(ln[i].checked){
+                    language+=ln[i].value+ ",";
+                }
+            }
+           let place = document.fm.location.value;
+
+           let obj = new objform(nm, adr, sex, language, place);
+           obj.getdata();
+            
+        }
+    </script>
+    <div id="show"></div>
+    
+</body>
+</html>
