@@ -80,27 +80,41 @@
     <div id="result"></div>
 
 <script>
-    function pass_fail(){
-        let MCQ = prompt("enter your MCQ number", "");
-        let decr = prompt("enter your decr number", "");
-        let evidence = prompt("enter your evidence number", "");
+   function prime(){
 
-        if(MCQ>=80 && decr>=60 && evidence>=60 ){
-            document.getElementById("result").innerHTML="<div class='pass'>passed</div>";
+    let num = prompt("enter a number", "");
 
-        }
-        else{
-            document.getElementById("result").innerHTML="<div class='fail'>failed</div>";
+    if(num ==1){
+        return "Is not a prime number";
 
-        }
 
-        
     }
+<<<<<<< HEAD
 </script>
 <button onclick="pass_fail()">Click here</button>
   
 </h1> -->
+=======
+    else if(num== 2){
+        return "Is a prime number";
+>>>>>>> e30240267bb29cda080481346e8aae53b009287d
 
+    }
+    else{
+        for( var x=2; x<num; x++){
+            if(num%x==0){
+                return "Is not a prime number";
+            }
+        }
+        return "Is a prime number";
+    }
+
+    
+   }
+   document.write( prime())
+    
+</script>
+</h1>
 
 
 

@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <form action="" name="mydate">
+        <input type="date" name="date"> <br>
+        <button type="button" onclick="mdate()">show</button>
+    </form>
+    <script> function mdate(){
+        let md = document.mydate.date.value ;
+        let days =["Sunday", "Monday", "Tuesday", "Wednesday", "Thursday", "Friday", "Saterday"];
+
+        const d = new Date(md);
+        
+        alert(days[d.getDay()])
+    
+    }
+
+    </script>
+    
+</body>
+</html>
