@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <form action="" name="fm">
+        Name:
+        <input type="text" name="name" placeholder="Enter your Name"><br>
+        <input type="email" name="email" placeholder="Enter your email"><br>
+        <input type="number" name="phone" placeholder="Enter your phone number"><br>
+        <input type="password" name="password" placeholder="Enter your password"><br>
+        <input type="password" name="rpassword" placeholder="Enter your password again"><br>
+        <button type="button" onclick="regform()">Submit</button>
+        
+    </form>
+
+    <script>
+        class rfm{
+            constructor(name, mail, phone, password, rpassword){
+                this.name=name;
+                this.mail=mail;
+                this.phone=phone;
+                this.pass=password;
+                this.rpass=rpassword;
+
+            }
+            getdata(){
+                let pattern= /[a-z0-9]+@[a-z]+\.[a-z]/;
+                if(this.name==""){
+                    alert("Name can't be blank");
+                }
+                
+                else if(this.mail.search(pattern)==-1){
+                    alert("email address is wrong");
+                }
+                else if(this.phone==""){
+                    alert("Phone number can't be blank");
+                }
+                else if(this.pass.length<8){
+                    alert("password must be at least 8 character");
+                }
+                else if(this.pass!==this.rpass){
+                    alert("password not matched");
+                }
+                else{
+                    document.write("Successfully Login");
+                }
+
+            }
+        }
+        function regform(){
+            let nm = document.fm.name.value;
+            let mail = document.fm.email.value;
+            let cell = document.fm.phone.value;
+            let pass = document.fm.password.value;
+            let cpass = document.fm.rpassword.value;
+
+            let obj = new rfm(nm, mail, cell, pass, cpass);
+            obj.getdata();
+        }
+
+    </script>
+    
+</body>
+</html>

@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <form action="" name="fm">
+        Email: <br>
+        <input type="email" name="email" placeholder="Enter your email"> <br><br>
+        <button type="button" onclick="valid()">Submit</button>
+    </form>
+
+    <script>
+        function valid(){
+            let mail = document.fm.email.value;
+
+            let pattern= /[a-z0-9]+@[a-z]+\.[a-z]/;
+
+            if(mail.search(pattern)==-1){
+                    alert("Email address is wrong");
+                }
+                else{
+                    document.write("Email address is Correct");
+                }
+        }
+    </script>
+    
+</body>
+</html>

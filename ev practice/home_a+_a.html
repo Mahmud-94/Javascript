@@ -6,29 +6,31 @@
     <title>Document</title>
 </head>
 <body>
+    <form action="" name="fm">
+        <input type="number" name="number" placeholder="Enter your number">
+        <button type="button" onclick="g()">Submit</button>
+    </form>
 
     <script>
         function g(){
-        let x = prompt("enter number", "");
+        let x = document.fm.number.value
     
         if(x>=71){
-            return "a+"
+            alert("a+");
     
         }
         else if(x>=61){
-            return "a"
+            alert("a");
         }
         else if(x>=40){
-            return "b"
+            alert("b");
         }
         else{
-            return "f"
+            alert("f");
             
         }
     }
     
-    
-    document.write(g())
     </script>
     
 </body>

@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <form action="" name="fm">
+        First name:
+        <input type="text" name="name" placeholder="Enter your first Name"><br>
+        Last name:
+        <input type="text" name="lname" placeholder="Enter your last Name"><br>
+        Gender:
+        <input type="radio" name="gender" value="M">Male
+        <input type="radio" name="gender" value="F">Female <br>
+        Language:
+        <input type="checkbox" class="ln" value="English">English
+        <input type="checkbox" class="ln" value="Bangla">Bangla
+        <input type="checkbox" class="ln" value="frensh">frensh
+        <input type="checkbox" class="ln" value="Spenish">Spenish  <br>
+        Address: <br>
+        <textarea name="address" placeholder="Enter your address" id=""></textarea> <br>
+        Location:
+        <select name="location" id="">
+            <option>Select one</option>
+            <option>Dhaka</option>
+            <option>Cumilla</option>
+            <option>Sylhet</option>
+        </select><br>
+        Zip code:
+        <input type="number" name="zcode" placeholder="Enter your zip code"> <br>
+        <button type="button" onclick="cofm()">Submit</button>
+
+    </form>
+    <div id="ss"></div>
+
+    <script>
+        class ofm{
+            constructor(fname, lname, sex, ln,  address, location, code){
+                this.fname=fname;
+                this.lname=lname;
+                this.sex=sex;
+                this.ln=ln;
+            
+                this.address=address;
+                this.location=location;
+                this.code=code;
+            }
+            getdata(){
+                let win = window.open("" ,"");
+                let output = "";
+                output += "First name: "+ this.fname + "<br>";
+                output += "Last name: "+ this.lname + "<br>";
+                output += "Sex: "+ this.sex + "<br>";
+                output += "Language: "+ this.ln + "<br>";
+                
+               
+                output += "Address: "+ this.address + "<br>";
+                output += "Location: "+ this.location + "<br>";
+                output += "Zip code: "+ this.code + "<br>";
+
+                win.document.write(output);
+
+
+            }
+            
+
+            
+        }
+
+        function cofm(){
+            let fnm = document.fm.name.value;
+            let lnm = document.fm.lname.value;
+            let sex = document.fm.gender.value;
+            let lan = document.getElementsByClassName("ln");
+            let lang = "";
+                for(i=0; i<lan.length; i++){
+                    if(lan[i].checked){
+                        lang+=lan[i].value + ",";
+                    }
+                }
+            let add = document.fm.address.value;
+            let place = document.fm.location.value;
+            let cd = document.fm.zcode.value;
+
+            let obj = new ofm(fnm, lnm, sex, lang, add, place, cd);
+            obj.getdata();
+            
+
+        }
+    </script>
+    
+</body>
+</html>
